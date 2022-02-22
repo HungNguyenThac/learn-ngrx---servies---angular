@@ -1,0 +1,32 @@
+<div class="company">
+  <ul *ngIf="listCompany.length >= 1">
+    <li *ngFor="let company of listCompany" (click)="selectCompany(company)">
+      <h3>{{ company.name }}</h3>
+      <p>{{ company.address1 }}</p>
+      <p>{{ company.address2 }}</p>
+      <p>{{ company.zip }}</p>
+    </li>
+  </ul>
+  <div style="display: flex; flex-direction: column">
+    <input
+      type="text"
+      [(ngModel)]="companyDetail.name"
+      [value]="companyDetail?.name"
+    />
+    <input
+      type="text"
+      [(ngModel)]="companyDetail.address1"
+      [value]="companyDetail?.address1"
+    />
+    <input
+      type="text"
+      [(ngModel)]="companyDetail.address2"
+      [value]="companyDetail?.address2"
+    />
+    <input
+      type="text"
+      [(ngModel)]="companyDetail.zip"
+      [value]="companyDetail?.zip"
+    />
+  </div>
+</div>

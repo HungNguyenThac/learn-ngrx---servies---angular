@@ -11,11 +11,12 @@ import { CoreModule } from './core/store/post/core.module';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { CompanyDetailComponent } from './core/company-detail/company-detail.component';
 import { FormsModule } from '@angular/forms';
+import { TestServiceComponent } from './test-service/test-service.component';
 
 // install ng @ngrx/store ==> store
 // install ng add @ngrx/store-devtools ==> redux dev tool
 @NgModule({
-  declarations: [AppComponent, PostDetailComponent, CompanyDetailComponent],
+  declarations: [AppComponent, PostDetailComponent, CompanyDetailComponent, TestServiceComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),

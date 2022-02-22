@@ -1,8 +1,8 @@
-import { PostState } from './../core/store/post/post.interface';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from './../core/store/appState.interface';
 import { getPosts } from './../core/store/post/post.actionCreater';
+import { PostState } from './../core/store/post/post.interface';
 
 @Component({
   selector: 'app-post-detail',

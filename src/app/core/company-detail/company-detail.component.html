@@ -1,6 +1,10 @@
 <div class="company">
   <ul *ngIf="listCompany.length >= 1">
-    <li *ngFor="let company of listCompany" (click)="selectCompany(company)">
+    <li
+      *ngFor="let company of listCompany"
+      (click)="selectCompany(company)"
+      (click)="select.emit()"
+    >
       <h3>{{ company.name }}</h3>
       <p>{{ company.address1 }}</p>
       <p>{{ company.address2 }}</p>

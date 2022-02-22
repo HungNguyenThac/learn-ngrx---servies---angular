@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { CompanyServiceService } from './../services/company.service.service';
 import { ICompany } from './../services/user.interface';
 
@@ -18,6 +18,8 @@ export class CompanyDetailComponent implements OnInit {
     this.listCompany = this.companyService.getListCompany();
     this.companyDetail = this.listCompany[0];
   }
+
+  @Output() select = new EventEmitter();
 
   selectCompany(company: ICompany) {
     this.companyDetail = company;

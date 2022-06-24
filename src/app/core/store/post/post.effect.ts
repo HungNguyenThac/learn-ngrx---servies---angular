@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, mergeMap, of } from 'rxjs';
-import { GET_POSTS } from './actionType';
-import { getPostsFailed, getPostsSuccess } from './post.actionCreater';
+import * as PostActions from './actionType';
+import { getPostsFailed, getPostsSuccess } from './post.actionCreator';
 
 @Injectable()
 export class PostsEffects {
   loadPosts$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(GET_POSTS),
+      ofType(PostActions.GET_POSTS),
       // mergeMap('call data thông qua services'),
       map((posts) => getPostsSuccess(posts)),
       catchError((error) => of(getPostsFailed(error)))

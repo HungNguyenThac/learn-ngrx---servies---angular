@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from './../core/store/appState.interface';
-import { getPosts } from './../core/store/post/post.actionCreater';
+import {
+  getPosts,
+  getPostSuccess,
+} from '../core/store/post/post.actionCreator';
 import { PostState } from './../core/store/post/post.interface';
 
 @Component({

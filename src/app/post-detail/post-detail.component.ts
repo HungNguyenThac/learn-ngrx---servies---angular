@@ -13,13 +13,13 @@ import { PostState } from './../core/store/post/post.interface';
   styleUrls: ['./post-detail.component.css'],
 })
 export class PostDetailComponent implements OnInit {
-  constructor(private store: Store<AppState>) {}
+  constructor(private store$: Store<AppState>) {}
 
   postStatus: any;
 
   ngOnInit(): void {
-    this.store.dispatch(getPosts());
-    this.store
+    this.store$.dispatch(getPosts());
+    this.store$
       .select<any>((state) => state.feature_post)
       .subscribe(
         (postsState: PostState) => (this.postStatus = postsState.status)
